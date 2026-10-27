@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ session.title }} | ARG Innovation Lab</title>
+</head>
+<body>
+    <h1>{{ session.icon }} {{ session.title }}</h1>
+
+    <h2>About This Session</h2>
+    <p>{{ session.overview }}</p>
+
+    <h2>What Will You Learn?</h2>
+    <ul>
+        {% for topic in session.topics %}
+            <li>{{ topic }}</li>
+        {% empty %}
+            <li>No topics found.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Hands-on Activities</h2>
+    <ul>
+        {% for activity in session.activities %}
+            <li>{{ activity }}</li>
+        {% empty %}
+            <li>No activities found.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Real-World Applications</h2>
+    <ul>
+        {% for application in session.applications %}
+            <li>{{ application }}</li>
+        {% empty %}
+            <li>No applications found.</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Student Project</h2>
+    <p>{{ session.project }}</p>
+
+    <a href="{% url 'home' %}#sessions">Back to Sessions</a>
+</body>
+</html>

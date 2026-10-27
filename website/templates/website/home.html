@@ -1,0 +1,249 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARG Innovation Lab | Kshitij Gurukul</title>
+    <link rel="stylesheet" href="{% static 'website/css/style.css' %}">
+</head>
+<body>
+
+<header class="site-header" id="home">
+    <div class="header-top">
+        <a href="#home" class="header-logo">
+            <img src="{% static 'website/images/logo.jpeg' %}"
+                 alt="School Logo">
+        </a>
+
+        <div class="header-title">
+            <h1>Kshitij Gurukul Vidyaniketan &amp; Jr. College</h1>
+            <p>ARG Innovation Lab</p>
+            <span>Learn · Build · Innovate</span>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#sessions">Sessions</a>
+        <a href="#students">Our Students</a>
+        <a href="#projects">Projects</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-copy">
+            <p class="hero-label">WELCOME TO OUR INNOVATION LAB</p>
+
+            <h2>Imagine.<br>
+                <span>Create. Innovate.</span>
+            </h2>
+
+            <p class="hero-description">
+                Discover the exciting world of Artificial Intelligence,
+                Robotics, Drone Technology, 3D Printing and Virtual Reality.
+                Learn by doing, build creative projects, and shape the future.
+            </p>
+
+            <a href="#sessions" class="hero-button">
+                Explore Our Lab <span>→</span>
+            </a>
+        </div>
+
+        <div class="hero-photo">
+            <img
+                src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1200&q=85"
+                alt="Students exploring technology and innovation">
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section section" id="about">
+        <p class="section-label">DISCOVER · EXPLORE · CREATE</p>
+        <h2>Welcome to Our Innovation Lab</h2>
+        <p class="section-description">
+            Our lab gives students an opportunity to explore modern technology
+            through hands-on activities, experiments, teamwork and creative
+            problem-solving.
+        </p>
+    </section>
+
+    <!-- FIVE SESSION CARDS -->
+    <section class="sessions-section section" id="sessions">
+        <div class="section-heading">
+            <span class="heading-line"></span>
+            <h2>Our Sessions</h2>
+            <span class="heading-line"></span>
+        </div>
+        <p class="section-subtitle">Explore. Learn. Build. Grow.</p>
+
+        <div class="session-grid">
+
+            <!-- SESSION 1 -->
+            <article class="session-card card-blue">
+                <span class="session-number">1</span>
+                <div class="session-icon" aria-hidden="true">🧠</div>
+                <h3>Artificial Intelligence</h3>
+                <ul>
+                    <li>What is AI?</li>
+                    <li>Types of AI</li>
+                    <li>Real-life applications</li>
+                </ul>
+                <a href="{% url 'session_detail' 'artificial-intelligence' %}"
+                   class="session-button">Learn More →</a>
+            </article>
+
+            <!-- SESSION 2 -->
+            <article class="session-card card-orange">
+                <span class="session-number">2</span>
+                <div class="session-icon" aria-hidden="true">🤖</div>
+                <h3>Robotics and Electronics</h3>
+                <ul>
+                    <li>Build and program robots</li>
+                    <li>Electronic circuits</li>
+                    <li>Sensors and logic</li>
+                </ul>
+                <a href="{% url 'session_detail' 'robotics' %}"
+                   class="session-button">Learn More →</a>
+            </article>
+
+            <!-- SESSION 3 -->
+            <article class="session-card card-green">
+                <span class="session-number">3</span>
+                <div class="session-icon" aria-hidden="true">🚁</div>
+                <h3>Drone Technology</h3>
+                <ul>
+                    <li>Drone components</li>
+                    <li>Flight control</li>
+                    <li>Real-world applications</li>
+                </ul>
+                <a href="{% url 'session_detail' 'drone-technology' %}"
+                   class="session-button">Learn More →</a>
+            </article>
+
+            <!-- SESSION 4 -->
+            <article class="session-card card-purple">
+                <span class="session-number">4</span>
+                <div class="session-icon" aria-hidden="true">🖨️</div>
+                <h3>3D Printing</h3>
+                <ul>
+                    <li>Design and modeling</li>
+                    <li>Print your ideas</li>
+                    <li>Innovation in action</li>
+                </ul>
+                <a href="{% url 'session_detail' '3d-printing' %}"
+                   class="session-button">Learn More →</a>
+            </article>
+
+            <!-- SESSION 5 -->
+            <article class="session-card card-pink">
+                <span class="session-number">5</span>
+                <div class="session-icon" aria-hidden="true">🥽</div>
+                <h3>Virtual Reality</h3>
+                <ul>
+                    <li>Explore virtual worlds</li>
+                    <li>Interactive learning</li>
+                    <li>Future technologies</li>
+                </ul>
+                <a href="{% url 'session_detail' 'virtual-reality' %}"
+                   class="session-button">Learn More →</a>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- STUDENTS SECTION -->
+    <section class="students-section section" id="students">
+        <div class="students-content">
+            <p class="section-label">OUR FUTURE INNOVATORS</p>
+            <h2>Young Minds. Big Ideas.</h2>
+            <p>
+                Students learn through hands-on experiments, robotics,
+                coding, AI activities and real-world projects.
+            </p>
+            <a href="#projects" class="secondary-button">Discover Student Projects →</a>
+        </div>
+
+        <div class="students-image">
+            <img
+                src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=85"
+                alt="Students learning practical technology">
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="projects-section section" id="projects">
+        <p class="section-label">IDEAS INTO REALITY</p>
+        <h2>Student Innovation Projects</h2>
+        <p class="section-description">
+            From intelligent systems to robotics and electronic models,
+            our students turn their ideas into working projects.
+        </p>
+
+        <div class="project-grid">
+            <article class="project-card">
+                <div class="project-icon">💡</div>
+                <h3>Smart Solutions</h3>
+                <p>Explore creative technology solutions for everyday problems.</p>
+            </article>
+
+            <article class="project-card">
+                <div class="project-icon">⚙️</div>
+                <h3>Robotics Projects</h3>
+                <p>Build, test and improve robots using sensors and circuits.</p>
+            </article>
+
+            <article class="project-card">
+                <div class="project-icon">💻</div>
+                <h3>AI Projects</h3>
+                <p>Experiment with AI tools, data, coding and machine learning.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section class="gallery-section section" id="gallery">
+        <p class="section-label">MOMENTS OF DISCOVERY</p>
+        <h2>Innovation Lab Gallery</h2>
+        <p class="section-description">
+            A place to imagine, experiment, collaborate and create.
+        </p>
+
+        <div class="gallery-grid">
+            <img
+                src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=700&q=80"
+                alt="Technology activity">
+            <img
+                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=700&q=80"
+                alt="Hands-on engineering activity">
+            <img
+                src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=700&q=80"
+                alt="Innovation and technology">
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+        <p class="section-label">START YOUR INNOVATION JOURNEY</p>
+        <h2>Think Big. Start Creating.</h2>
+        <p>
+            Kshitij Gurukul Vidyaniketan &amp; Jr. College<br>
+            Burungwadi · ARG Innovation Lab
+        </p>
+        <a href="#sessions" class="hero-button">Explore Our Sessions →</a>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>© 2026 Kshitij Gurukul Vidyaniketan &amp; Jr. College</p>
+    <p>ARG Innovation Lab · Learn · Build · Innovate</p>
+</footer>
+
+</body>
+</html>
