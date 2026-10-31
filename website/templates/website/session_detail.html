@@ -3,20 +3,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ session.title }} | ARG Innovation Lab</title>
 </head>
 <body>
     <h1>{{ session.icon }} {{ session.title }}</h1>
 
-    <h2>About This Session</h2>
+    {% if session.title == "Artificial Intelligence" %}
+
+        <h2>How Does AI Work?</h2>
+        <p>
+            Artificial Intelligence uses data and algorithms to identify
+            patterns, learn from examples, and make predictions or decisions.
+        </p>
+
+        <h2>AI Around Us</h2>
+        <p>
+            Artificial Intelligence is used in our daily lives, including
+            voice assistants, maps, online recommendations, healthcare,
+            and education.
+        </p>
+
+        <h2>Using AI Responsibly</h2>
+        <p>
+            We should use AI safely and responsibly. Protect personal
+            information, verify AI-generated information, respect others,
+            and do not blindly trust everything AI produces.
+        </p>
+
+    {% endif %}
+
     <p>{{ session.overview }}</p>
 
     <h2>What Will You Learn?</h2>
     <ul>
         {% for topic in session.topics %}
             <li>{{ topic }}</li>
-        {% empty %}
-            <li>No topics found.</li>
         {% endfor %}
     </ul>
 
@@ -24,8 +46,6 @@
     <ul>
         {% for activity in session.activities %}
             <li>{{ activity }}</li>
-        {% empty %}
-            <li>No activities found.</li>
         {% endfor %}
     </ul>
 
@@ -33,14 +53,12 @@
     <ul>
         {% for application in session.applications %}
             <li>{{ application }}</li>
-        {% empty %}
-            <li>No applications found.</li>
         {% endfor %}
     </ul>
 
     <h2>Student Project</h2>
     <p>{{ session.project }}</p>
 
-    <a href="{% url 'home' %}#sessions">Back to Sessions</a>
+    <a href="/#sessions">Back to Sessions</a>
 </body>
 </html>
